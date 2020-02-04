@@ -20,8 +20,14 @@ import {
 export default class SignUp extends Component {
   render() {
     return (
-      <View>
-        <Card>
+      <View
+        style={{
+          alignItems: 'center',
+          flex: 1,
+          backgroundColor: 'white',
+          justifyContent: 'center',
+        }}>
+        <Card style={{marginTop: '10%'}}>
           <Text style={styles.makd_text}>MAKDEE</Text>
           <TextField
             style={styles.textfield}
@@ -38,16 +44,6 @@ export default class SignUp extends Component {
             placeholderTextColor="black"
             textColor="#000000"
             returnKeyType="next"
-            autoCapitalize="none"
-            autoCorrect={false}
-          />
-          <TextField
-            style={styles.textfield}
-            placeholder="08xxxxxxx"
-            placeholderTextColor="black"
-            textColor="#000000"
-            returnKeyType="next"
-            keyboardType="numeric"
             autoCapitalize="none"
             autoCorrect={false}
           />
@@ -78,38 +74,25 @@ export default class SignUp extends Component {
             <Picker.Item label="Java" value="java" />
             <Picker.Item label="JavaScript" value="js" />
           </Picker>*/}
-
           <Button
-            style={styles.button}
-            color={'#6dbd63'}
-            title={'Next'}
+            color={'#202340'}
+            title={'Continue'}
             height={30}
+            onPress={() => this.props.navigation.navigate('Home')}
           />
         </Card>
+        <View style={{marginTop: '50%'}}>
+          <Text style={{margin: '5%'}}>
+            Any information entered here is bound by our terms and conditions to
+            the ends of the world
+          </Text>
+        </View>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  card: {
-    justifyContent: 'flex-start',
-    backgroundColor: '#ffffff',
-    width: 300,
-    height: 500,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowOffset: {x: 0, y: 0},
-    shadowRadius: 5,
-    borderWidth: 1,
-    borderRadius: 10,
-    borderColor: '#fff',
-    padding: 20,
-  },
-  button: {
-    height: '10%',
-    width: '10%',
-  },
   textfield: {
     width: '20%',
   },

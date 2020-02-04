@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   card: {
     justifyContent: 'flex-start',
     backgroundColor: '#ffffff',
-    width: 300,
-    height: 500,
+    width: '70%',
+    height: 'auto',
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowOffset: {x: 0, y: 2},
