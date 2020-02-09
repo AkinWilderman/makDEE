@@ -10,7 +10,6 @@ import {
   Button,
 } from 'react-native';
 import {TextField} from 'react-native-material-textfield';
-import FabButton from './FabButton';
 
 // create component
 class Index extends Component {
@@ -29,7 +28,7 @@ class Index extends Component {
 
     Animated.timing(this.state.topAnimation, {
       toValue: 800,
-      duration: 10,
+      duration: 2000,
     }).start();
   };
   // component render method
@@ -69,7 +68,7 @@ class Index extends Component {
               <TextField
                 value={phone}
                 style={styles.textfield}
-                placeholder="08xxxxxxxxx"
+                placeholder="80xxxxxxxx"
                 placeholderTextColor="black"
                 textColor="#000000"
                 returnKeyType="next"
@@ -82,7 +81,7 @@ class Index extends Component {
             <View style={{alignItems: 'flex-end', marginEnd: '5%'}}>
               <Button
                 title="Continue"
-                color='#202340'
+                color="#202340"
                 onPress={() => this.props.navigation.navigate('Signup')}
               />
             </View>

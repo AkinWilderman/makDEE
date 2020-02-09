@@ -18,6 +18,9 @@ import {
 } from 'react-native-responsive-screen';
 
 export default class SignUp extends Component {
+  state = {
+    gender: '',
+  };
   render() {
     return (
       <View
@@ -65,15 +68,15 @@ export default class SignUp extends Component {
             returnKeyType="go"
             secureTextEntry
           />
-          {/*<Picker
-            selectedValue={this.state.language}
-            style={{height: 50, width: 100}}
+          <Picker
+            selectedValue={this.state.gender}
+            style={{height: 50, width: 200}}
             onValueChange={(itemValue, itemIndex) =>
-              this.setState({language: itemValue})
+              this.setState({gender: itemValue})
             }>
-            <Picker.Item label="Java" value="java" />
-            <Picker.Item label="JavaScript" value="js" />
-          </Picker>*/}
+            <Picker.Item label="Female" value="female" />
+            <Picker.Item label="Male" value="male" />
+          </Picker>
           <Button
             color={'#202340'}
             title={'Continue'}
@@ -81,7 +84,7 @@ export default class SignUp extends Component {
             onPress={() => this.props.navigation.navigate('Home')}
           />
         </Card>
-        <View style={{marginTop: '50%'}}>
+        <View style={{marginTop: '20%'}}>
           <Text style={{margin: '5%'}}>
             Any information entered here is bound by our terms and conditions to
             the ends of the world
