@@ -7,8 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.pageContainer}>
-        {/*<StackNavigator />*/}
-        <Profile />
+        <StackNavigator />
       </View>
     );
   }

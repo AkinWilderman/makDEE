@@ -81,7 +81,7 @@ class Index extends Component {
             <View style={{alignItems: 'flex-end', marginEnd: '5%'}}>
               <Button
                 title="Continue"
-                color="#202340"
+                color="#092E20"
                 onPress={() => this.props.navigation.navigate('Signup')}
               />
             </View>
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   },
   mainView: {
     height: '75%',
-    backgroundColor: '#202340',
+    backgroundColor: '#092E20',
     alignItems: 'center',
     justifyContent: 'center',
   },

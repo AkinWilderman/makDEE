@@ -44,7 +44,7 @@ const BottomNavigator = createMaterialBottomTabNavigator(
     Profile: {
       screen: Profile,
       navigationOptions: {
-        headerTitle: 'mAKDEE',
+        headerShown: false,
         tabBarLabel: 'Profile',
         tabBarIcon: ({tintColor}) => (
           <Ionicons

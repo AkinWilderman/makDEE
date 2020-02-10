@@ -23,13 +23,7 @@ export default class SignUp extends Component {
   };
   render() {
     return (
-      <View
-        style={{
-          alignItems: 'center',
-          flex: 1,
-          backgroundColor: 'white',
-          justifyContent: 'center',
-        }}>
+      <View style={styles.container}>
         <Card style={{marginTop: '10%'}}>
           <Text style={styles.makd_text}>MAKDEE</Text>
           <TextField
@@ -78,16 +72,16 @@ export default class SignUp extends Component {
             <Picker.Item label="Male" value="male" />
           </Picker>
           <Button
-            color={'#202340'}
+            color={'#092E20'}
             title={'Continue'}
             height={30}
             onPress={() => this.props.navigation.navigate('Home')}
           />
         </Card>
         <View style={{marginTop: '20%'}}>
-          <Text style={{margin: '5%'}}>
+          <Text style={{margin: '5%', color: '#fff'}}>
             Any information entered here is bound by our terms and conditions to
-            the ends of the world
+            the ends of the world.
           </Text>
         </View>
       </View>
@@ -96,6 +90,12 @@ export default class SignUp extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    flex: 1,
+    backgroundColor: '#092E20',
+    justifyContent: 'center',
+  },
   textfield: {
     width: '20%',
   },
