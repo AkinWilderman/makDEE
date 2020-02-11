@@ -26,9 +26,7 @@ export default class Profile extends Component {
               Balance: {this.state.balance}
             </Text>
           </View>
-          <View style={styles.profileImage}>
-            <Text style={{flex: 1}}>Akin</Text>
-          </View>
+          <View style={styles.profileImage} />
           <View style={{flex: 1, marginLeft: '3%'}}>
             <Text style={{fontSize: 20, color: '#fff'}}>Akin Wilderman</Text>
             <Text style={{color: '#fff'}}>+2348069271881</Text>
