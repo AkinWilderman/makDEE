@@ -6,6 +6,7 @@ import {
   Text,
   Image,
   Animated,
+  TouchableOpacity,
   TouchableWithoutFeedback,
   Button,
 } from 'react-native';
@@ -79,11 +80,13 @@ class Index extends Component {
               />
             </View>
             <View style={{alignItems: 'flex-end', marginEnd: '5%'}}>
-              <Button
-                title="Continue"
-                color="#092E20"
-                onPress={() => this.props.navigation.navigate('Signup')}
-              />
+              <TouchableOpacity>
+                <Button
+                  title="Continue"
+                  color="#092E20"
+                  onPress={() => this.props.navigation.navigate('Signup')}
+                />
+              </TouchableOpacity>
             </View>
           </Animated.View>
         </TouchableWithoutFeedback>

@@ -9,14 +9,21 @@ import {
 } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
+function Separator() {
+  return <View style={styles.separator} />;
+}
+
 export default class Profile extends Component {
+  state = {
+    balance: '₦12,000.00',
+  };
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.top}>
           <View>
             <Text style={{color: '#fff', alignSelf: 'flex-end'}}>
-              Balance: ₦12,000.00
+              Balance: {this.state.balance}
             </Text>
           </View>
           <View style={styles.profileImage}>
@@ -50,6 +57,7 @@ export default class Profile extends Component {
               color={'grey'}
             />
           </View>
+          <Separator />
           <View style={styles.belowItems}>
             <Ionicons
               name={Platform.select({
@@ -70,6 +78,7 @@ export default class Profile extends Component {
               color={'grey'}
             />
           </View>
+          <Separator />
           <View style={styles.belowItems}>
             <Ionicons
               name={Platform.select({
@@ -92,6 +101,7 @@ export default class Profile extends Component {
               color={'grey'}
             />
           </View>
+          <Separator />
           <View style={styles.belowItems}>
             <Ionicons
               name={Platform.select({
@@ -114,6 +124,7 @@ export default class Profile extends Component {
               color={'grey'}
             />
           </View>
+          <Separator />
           <View style={styles.belowItems}>
             <Ionicons
               name={Platform.select({
@@ -124,7 +135,7 @@ export default class Profile extends Component {
               color={'red'}
             />
             <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>
-              Add Payment Method
+              Payment Method
             </Text>
             <Ionicons
               style={{marginLeft: 'auto'}}
@@ -136,6 +147,7 @@ export default class Profile extends Component {
               color={'grey'}
             />
           </View>
+          <Separator />
           <View style={styles.belowItems}>
             <Ionicons
               name={Platform.select({
@@ -193,5 +205,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: '2%',
     padding: '2%',
+  },
+  separator: {
+    marginVertical: 1,
+    borderBottomColor: '#D6D8DC',
+    borderBottomWidth: 0.5,
   },
 });
