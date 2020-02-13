@@ -12,11 +12,9 @@ const Card = props => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
   },
   card: {
-    flex: 1,
     backgroundColor: '#fff',
     width: '95%',
     height: 'auto',

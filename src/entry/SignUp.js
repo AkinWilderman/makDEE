@@ -11,11 +11,6 @@ import {
 } from 'react-native';
 import {TextField} from 'react-native-material-textfield';
 import Card from './Card';
-import PickerForm from './Picker';
-import {
-  heightPercentageroDP as hd,
-  widthPercentageToDP as wd,
-} from 'react-native-responsive-screen';
 
 export default class SignUp extends Component {
   state = {

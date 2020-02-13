@@ -7,7 +7,9 @@ const MakdeeSpot = () => {
     <View>
       <Text style={{marginTop: 5, marginLeft: 10}}> mAKDEE spot</Text>
       <Card>
-        <View style={styles.cardItemView}>
+        <View
+          style={styles.cardItemView}
+          onPress={() => this.props.navigation.navigate('Orderpage')}>
           <Image
             source={require('../media/suya.jpg')}
             style={{height: 'auto', width: 90}}
@@ -211,6 +213,9 @@ export default class Main extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  spotView: {
+    alignItems: 'center',
   },
   cardItemView: {
     flexDirection: 'row',

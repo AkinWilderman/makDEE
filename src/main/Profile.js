@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Button,
   Platform,
+  Image,
 } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
@@ -15,7 +16,7 @@ function Separator() {
 
 export default class Profile extends Component {
   state = {
-    balance: '₦12,000.00',
+    balance: '₦70,000.00',
   };
   render() {
     return (
@@ -26,7 +27,20 @@ export default class Profile extends Component {
               Balance: {this.state.balance}
             </Text>
           </View>
-          <View style={styles.profileImage} />
+          <View>
+            <Image
+              source={require('../media/profile_picture.jpg')}
+              style={{
+                width: 100,
+                height: 100,
+                borderRadius: 100,
+                borderWidth: 4,
+                borderColor: '#fff',
+                backgroundColor: '#eee',
+                marginLeft: '2%',
+              }}
+            />
+          </View>
           <View style={{flex: 1, marginLeft: '3%'}}>
             <Text style={{fontSize: 20, color: '#fff'}}>Akin Wilderman</Text>
             <Text style={{color: '#fff'}}>+2348069271881</Text>

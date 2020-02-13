@@ -9,6 +9,7 @@ import SignUp from './SignUp';
 import Main from '../main/Main';
 import Profile from '../main/Profile';
 import Order from '../main/Order';
+import OrderStackNavigator from '../main/OrderStackNav';
 
 // bottom tab navigator
 const BottomNavigator = createMaterialBottomTabNavigator(
@@ -27,11 +28,11 @@ const BottomNavigator = createMaterialBottomTabNavigator(
         ),
       },
     },
-    Order: {
-      screen: Order,
+    ClickOrder: {
+      screen: OrderStackNavigator,
       navigationOptions: {
         title: 'mAKDEE',
-        tabBarLabel: 'Order',
+        tabBarLabel: 'Orders',
         tabBarIcon: ({tintColor}) => (
           <Ionicons
             name={Platform.select({ios: 'ios-menu', android: 'md-menu'})}
