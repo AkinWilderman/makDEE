@@ -47,139 +47,160 @@ export default class Profile extends Component {
           </View>
         </View>
         <View style={styles.below}>
-          <View style={styles.belowItems}>
-            <Ionicons
-              name={Platform.select({
-                ios: 'ios-settings',
-                android: 'md-settings',
-              })}
-              size={20}
-              color={'red'}
-            />
-            <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>
-              Settings
-            </Text>
-            <Ionicons
-              style={{marginLeft: 'auto'}}
-              name={Platform.select({
-                ios: 'ios-arrow-forward',
-                android: 'md-arrow-dropright',
-              })}
-              size={30}
-              color={'grey'}
-            />
-          </View>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Settings')}>
+            <View style={styles.belowItems}>
+              <Ionicons
+                name={Platform.select({
+                  ios: 'ios-settings',
+                  android: 'md-settings',
+                })}
+                size={20}
+                color={'red'}
+              />
+              <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>
+                Settings
+              </Text>
+              <Ionicons
+                style={{marginLeft: 'auto'}}
+                name={Platform.select({
+                  ios: 'ios-arrow-forward',
+                  android: 'md-arrow-dropright',
+                })}
+                size={30}
+                color={'grey'}
+              />
+            </View>
+          </TouchableOpacity>
           <Separator />
-          <View style={styles.belowItems}>
-            <Ionicons
-              name={Platform.select({
-                ios: 'ios-pin',
-                android: 'md-pin',
-              })}
-              size={20}
-              color={'red'}
-            />
-            <Text style={{marginLeft: 30, fontSize: 16}}>Delivery Address</Text>
-            <Ionicons
-              style={{marginLeft: 'auto'}}
-              name={Platform.select({
-                ios: 'ios-arrow-forward',
-                android: 'md-arrow-dropright',
-              })}
-              size={30}
-              color={'grey'}
-            />
-          </View>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('DeliveryAddress')}>
+            <View style={styles.belowItems}>
+              <Ionicons
+                name={Platform.select({
+                  ios: 'ios-pin',
+                  android: 'md-pin',
+                })}
+                size={20}
+                color={'red'}
+              />
+              <Text style={{marginLeft: 30, fontSize: 16}}>
+                Delivery Address
+              </Text>
+              <Ionicons
+                style={{marginLeft: 'auto'}}
+                name={Platform.select({
+                  ios: 'ios-arrow-forward',
+                  android: 'md-arrow-dropright',
+                })}
+                size={30}
+                color={'grey'}
+              />
+            </View>
+          </TouchableOpacity>
           <Separator />
-          <View style={styles.belowItems}>
-            <Ionicons
-              name={Platform.select({
-                ios: 'ios-mail',
-                android: 'md-mail',
-              })}
-              size={20}
-              color={'red'}
-            />
-            <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>
-              Messages
-            </Text>
-            <Ionicons
-              style={{marginLeft: 'auto'}}
-              name={Platform.select({
-                ios: 'ios-arrow-forward',
-                android: 'md-arrow-dropright',
-              })}
-              size={30}
-              color={'grey'}
-            />
-          </View>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Messages')}>
+            <View style={styles.belowItems}>
+              <Ionicons
+                name={Platform.select({
+                  ios: 'ios-mail',
+                  android: 'md-mail',
+                })}
+                size={20}
+                color={'red'}
+              />
+              <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>
+                Messages
+              </Text>
+              <Ionicons
+                style={{marginLeft: 'auto'}}
+                name={Platform.select({
+                  ios: 'ios-arrow-forward',
+                  android: 'md-arrow-dropright',
+                })}
+                size={30}
+                color={'grey'}
+              />
+            </View>
+          </TouchableOpacity>
           <Separator />
-          <View style={styles.belowItems}>
-            <Ionicons
-              name={Platform.select({
-                ios: 'ios-cart',
-                android: 'md-cart',
-              })}
-              size={20}
-              color={'red'}
-            />
-            <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>
-              Recent Orders
-            </Text>
-            <Ionicons
-              style={{marginLeft: 'auto'}}
-              name={Platform.select({
-                ios: 'ios-arrow-forward',
-                android: 'md-arrow-dropright',
-              })}
-              size={30}
-              color={'grey'}
-            />
-          </View>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('RecentOrders')}>
+            <View style={styles.belowItems}>
+              <Ionicons
+                name={Platform.select({
+                  ios: 'ios-cart',
+                  android: 'md-cart',
+                })}
+                size={20}
+                color={'red'}
+              />
+              <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>
+                Recent Orders
+              </Text>
+              <Ionicons
+                style={{marginLeft: 'auto'}}
+                name={Platform.select({
+                  ios: 'ios-arrow-forward',
+                  android: 'md-arrow-dropright',
+                })}
+                size={30}
+                color={'grey'}
+              />
+            </View>
+          </TouchableOpacity>
           <Separator />
-          <View style={styles.belowItems}>
-            <Ionicons
-              name={Platform.select({
-                ios: 'ios-card',
-                android: 'md-card',
-              })}
-              size={20}
-              color={'red'}
-            />
-            <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>
-              Payment Method
-            </Text>
-            <Ionicons
-              style={{marginLeft: 'auto'}}
-              name={Platform.select({
-                ios: 'ios-arrow-forward',
-                android: 'md-arrow-dropright',
-              })}
-              size={30}
-              color={'grey'}
-            />
-          </View>
-          <Separator />
-          <View style={styles.belowItems}>
-            <Ionicons
-              name={Platform.select({
-                ios: 'ios-help-circle',
-                android: 'md-help-circle',
-              })}
-              size={20}
-              color={'red'}
-            />
-            <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>Help</Text>
-            <Ionicons
-              style={{marginLeft: 'auto'}}
-              name={Platform.select({
-                ios: 'ios-arrow-forward',
-                android: 'md-arrow-dropright',
-              })}
-              size={30}
-              color={'grey'}
-            />
-          </View>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('PaymentMethod')}>
+            <View style={styles.belowItems}>
+              <Ionicons
+                name={Platform.select({
+                  ios: 'ios-card',
+                  android: 'md-card',
+                })}
+                size={20}
+                color={'red'}
+              />
+              <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>
+                Payment Method
+              </Text>
+              <Ionicons
+                style={{marginLeft: 'auto'}}
+                name={Platform.select({
+                  ios: 'ios-arrow-forward',
+                  android: 'md-arrow-dropright',
+                })}
+                size={30}
+                color={'grey'}
+              />
+            </View>
+            <Separator />
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Help')}>
+            <View style={styles.belowItems}>
+              <Ionicons
+                name={Platform.select({
+                  ios: 'ios-help-circle',
+                  android: 'md-help-circle',
+                })}
+                size={20}
+                color={'red'}
+              />
+              <Text style={{marginLeft: 30, fontSize: 16, flex: 1}}>Help</Text>
+              <Ionicons
+                style={{marginLeft: 'auto'}}
+                name={Platform.select({
+                  ios: 'ios-arrow-forward',
+                  android: 'md-arrow-dropright',
+                })}
+                size={30}
+                color={'grey'}
+              />
+            </View>
+            <Separator />
+          </TouchableOpacity>
         </View>
       </View>
     );

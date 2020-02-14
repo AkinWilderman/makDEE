@@ -45,7 +45,7 @@ export default class Order extends Component {
             </View>
             <TouchableOpacity style={{marginLeft: 'auto'}}>
               <Button
-                title="Orderr again"
+                title="Order again"
                 color="#092E20"
                 onPress={() => this.props.navigation.navigate('OrderPage')}
               />

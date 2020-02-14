@@ -10,12 +10,14 @@ import Main from '../main/Main';
 import Profile from '../main/Profile';
 import Order from '../main/Order';
 import OrderStackNavigator from '../main/OrderStackNav';
+import MainStackNavigator from '../main/MainStackNav';
+import ProfileStackNavigator from '../main/ProfileStackNav';
 
 // bottom tab navigator
 const BottomNavigator = createMaterialBottomTabNavigator(
   {
     Home: {
-      screen: Main,
+      screen: MainStackNavigator,
       navigationOptions: {
         title: 'mAKDEE',
         tabBarLabel: 'Home',
@@ -28,7 +30,7 @@ const BottomNavigator = createMaterialBottomTabNavigator(
         ),
       },
     },
-    ClickOrder: {
+    Order: {
       screen: OrderStackNavigator,
       navigationOptions: {
         title: 'mAKDEE',
@@ -43,7 +45,7 @@ const BottomNavigator = createMaterialBottomTabNavigator(
       },
     },
     Profile: {
-      screen: Profile,
+      screen: ProfileStackNavigator,
       navigationOptions: {
         headerShown: false,
         tabBarLabel: 'Profile',
@@ -76,7 +78,7 @@ const BottomNavigator = createMaterialBottomTabNavigator(
 // App navigator
 const AppNavigator = createStackNavigator(
   {
-    Main: {
+    Index: {
       screen: Index,
       navigationOptions: {
         headerShown: false,
@@ -85,7 +87,7 @@ const AppNavigator = createStackNavigator(
     Signup: {
       screen: SignUp,
     },
-    Home: {
+    Main: {
       screen: BottomNavigator,
       navigationOptions: {
         headerTitleAlign: 'center',
@@ -94,7 +96,10 @@ const AppNavigator = createStackNavigator(
       },
     },
   },
-  {},
+  {
+    initialRouteName: 'Index',
+    headerMode: 'none',
+  },
 );
 
 export default createAppContainer(AppNavigator);

@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   Button,
+  KeyboardAvoidingView,
 } from 'react-native';
 import {TextField} from 'react-native-material-textfield';
 
@@ -66,18 +67,20 @@ class Index extends Component {
               <Text style={{fontSize: 21}}>Best place to taste mAKDEE</Text>
             </View>
             <View style={{width: '80%', marginLeft: '5%'}}>
-              <TextField
-                value={phone}
-                style={styles.textfield}
-                placeholder="80xxxxxxxx"
-                placeholderTextColor="black"
-                textColor="#000000"
-                returnKeyType="next"
-                keyboardType="numeric"
-                autoCorrect={false}
-                prefix={'+234'}
-                onFocus={this.startAnimation}
-              />
+              <KeyboardAvoidingView>
+                <TextField
+                  value={phone}
+                  style={styles.textfield}
+                  placeholder="80xxxxxxxx"
+                  placeholderTextColor="black"
+                  textColor="#000000"
+                  returnKeyType="next"
+                  keyboardType="numeric"
+                  autoCorrect={false}
+                  prefix={'+234'}
+                  onFocus={this.startAnimation}
+                />
+              </KeyboardAvoidingView>
             </View>
             <View style={{alignItems: 'flex-end', marginEnd: '5%'}}>
               <TouchableOpacity>
