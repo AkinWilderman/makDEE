@@ -1,2 +1,2 @@
 # makDEE
-mAJDEE app
+A burger ordering application
