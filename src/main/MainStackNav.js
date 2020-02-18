@@ -11,7 +11,7 @@ const MainStackNavigator = createStackNavigator({
       headerLeft: () => false,
     },
   },
-  OrderPage: {
+  OrderPage1: {
     screen: ProductPage,
     navigationOptions: {
       headerShown: false,

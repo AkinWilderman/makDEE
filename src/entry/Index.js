@@ -30,7 +30,7 @@ class Index extends Component {
 
     Animated.timing(this.state.topAnimation, {
       toValue: 800,
-      duration: 2000,
+      duration: 500,
     }).start();
   };
   // component render method
@@ -56,15 +56,15 @@ class Index extends Component {
         <TouchableWithoutFeedback onPress={this.startAnimation}>
           <Animated.View style={[styles.mainView, topAnimatedStyle]}>
             <Image
-              source={require('../media/bread.jpg')}
-              style={{height: '10%', width: '15%'}}
+              source={require('../media/makdee_landscape.png')}
+              style={{height: '20%', width: '40%'}}
             />
           </Animated.View>
         </TouchableWithoutFeedback>
         <TouchableWithoutFeedback onPress={this.startAnimation}>
           <Animated.View style={[styles.subView, fieldAnimatedStyle]}>
             <View style={{alignItems: 'center'}}>
-              <Text style={{fontSize: 21}}>Best place to taste mAKDEE</Text>
+              <Text style={{fontSize: 21}}> Get eating with mAKDEE </Text>
             </View>
             <View style={{width: '80%', marginLeft: '5%'}}>
               <KeyboardAvoidingView>
