@@ -1,2 +1,2 @@
 # makDEE
-A burger ordering application
+A React Native burger ordering application, available on iOS and Android.
